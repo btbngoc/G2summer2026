@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>G2 Company Trip 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="assets/base.css" />
+  <link rel="stylesheet" href="assets/sections.css" />
+</head>
+<body class="js-anim">
+  <nav id="nav" class="nav">
+    <div class="wrap nav-inner">
+      <a href="#hero" class="logo" id="logo">
+        <span class="logo-mark">G2<span class="seven"></span></span>
+        <span class="logo-sub">COMPANY TRIP</span>
+      </a>
+      <div class="nav-links">
+        <a href="#hero">Trang chủ</a>
+        <a href="#roadmapSection">Hành trình</a>
+        <a href="#itinerary">Lịch trình</a>
+        <a href="#hotel">Khách sạn</a>
+        <a href="#team">Team</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div class="nav-tools">
+        <button id="menuBtn" class="icon-btn" aria-label="Menu">☰</button>
+        <button class="icon-btn js-music" aria-label="Music">🔇</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero" id="hero">
+    <div class="hero-scene">
+      <div class="sun"></div>
+      <div class="cloud c1"></div>
+      <div class="cloud c2"></div>
+      <div class="cloud c3"></div>
+      <div class="bird b1"></div>
+      <div class="bird b2"></div>
+      <div class="bird b3"></div>
+      <div class="coast">
+        <div class="mtn m1"></div>
+        <div class="mtn m2"></div>
+        <div class="mtn m3"></div>
+      </div>
+      <div class="ocean"><div class="waves"></div></div>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <div class="eyebrow">Summer 2026</div>
+        <h1 class="hero-title">G2 <span class="yellow">COMPANY TRIP</span><span class="sm">HẠ LONG • BEACH • MEMORIES</span></h1>
+        <div class="hero-slogan"><span class="dot"></span>Đoàn công ty G2 – Hạ Long 2026</div>
+       
+        <div class="countdown">
+          <div class="cap">Khởi hành</div>
+          <div class="cd-row">
+            <div class="cd-cell"><div class="cd-num" id="cd-d">00</div><div class="cd-lab">Ngày</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-cell"><div class="cd-num" id="cd-h">00</div><div class="cd-lab">Giờ</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-cell"><div class="cd-num" id="cd-m">00</div><div class="cd-lab">Phút</div></div>
+            <div class="cd-sep">:</div>
+            <div class="cd-cell"><div class="cd-num" id="cd-s">00</div><div class="cd-lab">Giây</div></div>
+          </div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#roadmapSection" data-scroll="#roadmapSection">🗺️ Xem hành trình</a>
+          <a class="btn btn-ghost" href="#hotel" data-scroll="#hotel">🏨 Tìm phòng</a>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="wx-card">
+          <div class="wx-top">
+            <div class="wx-ttl">DỰ BÁO THỜI TIẾT HẠ LONG</div>
+            <div class="wx-loc" id="wxDate">--/--/----</div>
+          </div>
+          <div class="wx-days" id="wxDays"></div>
+        </div>
+        <div class="road-curve"></div>
+        <div class="bus-slot">
+          <div class="guardrail"></div>
+          <img src="assets/img/hero-bus.jpg" alt="Bus" style="width:100%;height:auto;" />
+        </div>
+        <div class="palm p1"><div class="trunk"></div><div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div><div class="leaf l4"></div><div class="leaf l5"></div></div>
+        <div class="palm p2"><div class="trunk"></div><div class="leaf l1"></div><div class="leaf l2"></div><div class="leaf l3"></div><div class="leaf l4"></div><div class="leaf l5"></div></div>
+        <div class="signpost">
+          <div class="sign"><div class="road-to">ROAD TO</div><div class="place">Hạ Long</div></div>
+          <div class="pole"></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-fade"></div>
+  </header>
+
+  <main>
+    <section class="roadmap section" id="roadmapSection">
+      <div class="wrap">
+        <div class="roadmap-head reveal">
+          <div class="kicker">🗺️ Roadmap</div>
+          <h2>Hành trình <span class="y">đầy cảm hứng</span></h2>
+          <p>Chuyến đi 3 ngày 2 đêm với biển, team building, gala và những khoảnh khắc đáng nhớ.</p>
+        </div>
+        <div class="track">
+          <svg class="road-svg" id="roadSvg" viewBox="0 0 1200 230" aria-hidden="true">
+            <path id="roadPath" d="M0,160 C150,90 260,90 420,120 S760,210 940,140 S1120,40 1200,90" fill="none" stroke="#fff" stroke-width="10" stroke-linecap="round" opacity="0.4"></path>
+          </svg>
+          <div id="mapBus" class="map-bus">
+            <div class="body"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section itin" id="itinerary">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">🗓️ Lịch trình</div>
+          <h2>Đi từng <span class="y">ngày</span> một</h2>
+          <p>Nhấn vào từng ngày để xem kế hoạch chi tiết.</p>
+        </div>
+        <div id="dayTabs" class="day-tabs"></div>
+        <div id="dayPanels"></div>
+      </div>
+    </section>
+
+    <section class="section" id="includesSection">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">🎁 Bao gồm</div>
+          <h2>Chuyến đi <span class="y">đã bao gồm</span></h2>
+          <p>Toàn bộ dịch vụ và tiện ích chính của chuyến đi.</p>
+        </div>
+        <div id="includesGrid" class="includes-grid"></div>
+      </div>
+    </section>
+
+    <section class="section hotel" id="hotel">
+      <div class="wrap">
+        <div class="hotel-top reveal">
+          <div>
+            <div class="kicker">🏨 Khách sạn 5 sao: royalhalonghotel.com</div>
+            <h2>Thông tin lưu trú & tìm phòng</h2>
+            <p>Nhập LDAP để tra phòng và danh sách bạn cùng phòng.</p>
+            <div class="stars">★★★★★</div>
+            <div class="hotel-facts">
+              <div class="fact"><b>02</b><span>đêm</span></div>
+              <div class="fact"><b>5★</b><span>tiêu chuẩn</span></div>
+              <div class="fact"><b>Hạ Long</b><span>biển xanh</span></div>
+            </div>
+            <div class="amenity-row">
+              <span class="amenity">🛏️ Phòng đôi</span>
+              <span class="amenity">🏊 Hồ bơi</span>
+              <span class="amenity">🍽️ Dinner</span>
+              <span class="amenity">📶 Wi-Fi</span>
+            </div>
+          </div>
+          <div class="hotel-gallery">
+            <image-slot id="hotel-big" class="big" shape="rect" placeholder="Ảnh khách sạn"></image-slot>
+            <image-slot id="hotel-1" shape="rect" placeholder="Ảnh view biển"></image-slot>
+            <image-slot id="hotel-2" shape="rect" placeholder="Ảnh phòng"></image-slot>
+            <image-slot id="hotel-3" shape="rect" placeholder="Ảnh buffet"></image-slot>
+            <image-slot id="hotel-4" shape="rect" placeholder="Ảnh tiện ích"></image-slot>
+          </div>
+        </div>
+        <div class="room-search reveal">
+          <span class="si">🔎</span>
+          <input id="roomSearch" type="search" placeholder="Nhập LDAP (vd: hvan)" />
+        </div>
+        <div id="roomsGrid" class="rooms-grid"></div>
+      </div>
+    </section>
+
+    <section class="section team" id="team">
+      <div class="sand"></div>
+      <div class="sea-strip"></div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">🎯 Team Building</div>
+          <h2>Hành trình <span class="y">đầy thử thách</span></h2>
+          <p>Những trò chơi đậm chất biển, vui khỏe và gắn kết.</p>
+        </div>
+        <div class="flags reveal">
+          <div class="flag f1"></div>
+          <div class="flag f2"></div>
+          <div class="flag f3"></div>
+        </div>
+        <div id="tbGrid" class="tb-grid"></div>
+        <div id="tbInfo" class="tb-info"></div>
+        <div class="tb-gallery-head reveal"><h3>Khoảnh khắc Team</h3><p>Ảnh minh họa cho các hoạt động tại bãi biển và sân chơi.</p></div>
+        <div class="tb-gallery">
+          <img src="assets/img/tb-game-1.jpg" alt="Ảnh team 1" />
+          <img src="assets/img/tb-game-2.jpg" alt="Ảnh team 2" />
+          <img src="assets/img/tb-game-3.jpg" alt="Ảnh team 3" />
+          <img src="assets/img/tb-game-4.jpg" alt="Ảnh team 4" />
+          <img src="assets/img/tb-game-5.jpg" alt="Ảnh team 5" />
+          <img src="assets/img/tb-game-6.jpg" alt="Ảnh team 6" />
+          
+        </div>
+        <div class="tb-awards-head reveal"><h3>Giải thưởng</h3><p>Danh hiệu sẽ được công bố tại Gala Night.</p></div>
+        <div id="tbAwards" class="tb-awards"></div>
+      </div>
+    </section>
+
+    <section class="section gala" id="gala">
+      <div class="stars-bg"></div>
+      <div class="spotlight sp1"></div>
+      <div class="spotlight sp2"></div>
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">🎆 Gala Night</div>
+          <h2>Đêm <span class="y">không quên</span></h2>
+          <p>Vinh danh, trao giải, giao lưu và kết thúc chuyến đi thật đáng nhớ.</p>
+        </div>
+        <div class="gala-card reveal">
+          <div class="gala-meta">
+            <div class="gm"><div class="gl">Thời gian</div><div class="gv">18:00-22:00</div></div>
+            <div class="gm"><div class="gl">Địa điểm</div><div class="gv">Nhà hàng</div></div>
+            <div class="gm"><div class="gl">Dress code</div><div class="gv">Tự do</div></div>
+          </div>
+          <ul id="agendaList" class="agenda"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section explore" id="explore">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">📸 Điểm đến</div>
+          <h2>Khám phá <span class="y">Hạ Long</span></h2>
+          <p>Những địa điểm đẹp nhất để chụp hình, nghỉ ngơi và lưu giữ ký ức.</p>
+        </div>
+        <div id="exGrid" class="ex-grid"></div>
+      </div>
+    </section>
+
+    <section class="section food" id="food">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">🍤 Ẩm thực</div>
+          <h2>Đặc sản <span class="y">không thể bỏ lỡ</span></h2>
+          <p>Những món ngon đặc trưng của Hạ Long và Quảng Ninh.</p>
+        </div>
+        <div id="foodGrid" class="food-grid"></div>
+      </div>
+    </section>
+
+    <section class="section rules" id="rules">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">📋 Nội quy</div>
+          <h2>Vui <span class="y">mọi lúc</span>, đúng chuẩn mực</h2>
+          <p>Những lưu ý để chuyến đi diễn ra trơn tru và an toàn.</p>
+        </div>
+        <div id="rulesGrid" class="rules-grid"></div>
+      </div>
+    </section>
+
+    <section class="section onbus" id="onbus">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">🚌 Trên xe</div>
+          <h2>Thông tin, nhạc và <span class="y">điểm vui</span></h2>
+          <p>Chia sẻ bài hát yêu thích và theo dõi cảm xúc chuyến đi.</p>
+        </div>
+        <div class="bus-list reveal">
+          <article class="bus-card"><div class="bus-ic">🚌</div><h3>03 xe 35 chỗ</h3><p class="bus-note">Xe đời mới, máy lạnh, tài xế có kinh nghiệm.</p><span class="bus-soon">Ấn tượng, thoải mái, an toàn</span></article>
+          <article class="bus-card"><div class="bus-ic">🎵</div><h3>Nhạc chuyến đi</h3><p class="bus-note">Đăng ký bài hát để cả đoàn cùng nghe trong hành trình.</p><span class="bus-soon">Realtime & localStorage</span></article>
+        </div>
+        <div class="song-box reveal">
+          <div class="song-head">
+            <h3>Đăng ký bài hát</h3>
+            <p>Viết LDAP và tên bài hát bạn muốn nghe cùng đoàn.</p>
+          </div>
+          <form id="songForm" class="song-form">
+            <input id="songLdap" type="text" placeholder="LDAP" />
+            <input id="songName" type="text" placeholder="Tên bài hát" />
+            <button type="submit">Đăng ký 🎶</button>
+          </form>
+          <div id="songList" class="song-list"></div>
+          <div id="songHint" class="song-hint">Hãy đăng ký một bài hát để làm chuyến đi thêm vui.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div class="kicker">❓ FAQ</div>
+          <h2>Câu hỏi <span class="y">thường gặp</span></h2>
+          <p>Giúp bạn chuẩn bị tốt hơn cho chuyến đi.</p>
+        </div>
+        <div id="faqList" class="faq-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer" id="footer">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="kicker">🛟 Ban tổ chức</div>
+        <h2>G2 <span class="y">Team</span></h2>
+        <p>Liên hệ với BTC nếu cần hỗ trợ trong hành trình.</p>
+      </div>
+      <div id="btcGrid" class="btc-grid"></div>
+      <div class="foot-bottom reveal">
+        <div class="big">G2 Company Trip 2026</div>
+        <div>Hạ Long • Team Building • Gala Night • Kỷ niệm vui</div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="eggOverlay" class="egg-overlay" aria-hidden="true">
+    <div class="egg-modal">
+      <div class="em">🚌</div>
+      <h3>Phát hiện easter egg!</h3>
+      <p>Bạn vừa bấm 7 lần logo. Đây là màn hình bí mật của chuyến đi.</p>
+      <button id="eggClose" type="button">Đóng</button>
+    </div>
+  </div>
+  <div id="eggBus" class="egg-bus">🚌</div>
+  <nav class="mobile-nav">
+    <a href="#hero">🏠<span>Home</span></a>
+    <a href="#roadmapSection">🗺️<span>Map</span></a>
+    <a href="#itinerary">🗓️<span>Plan</span></a>
+    <a href="#hotel">🏨<span>Room</span></a>
+    <a href="#faq">❓<span>FAQ</span></a>
+  </nav>
+
+  <script src="assets/img-manifest.js"></script>
+  <script src="assets/image-slot.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

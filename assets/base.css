@@ -1,0 +1,327 @@
+/* ============ G2 COMPANY TRIP 2026 — base + scene + nav + hero + roadmap ============ */
+:root{
+  --ocean:#19B5F2; --deep:#0F6F9A; --sky:#E8FBFF; --white:#FFFFFF;
+  --palm:#25C36E; --sand:#FFF7E8; --sun:#FFD54A; --sunset:#FFBE3D;
+  --coral:#FF5AAE; --night:#0A4C67; --gold:#FFE06F;
+  --ink:#0A3D58; --ink-soft:#5C7D8A;
+  --shadow-soft:0 18px 40px -18px rgba(7,75,110,.45);
+  --shadow-card:0 22px 50px -22px rgba(8,68,104,.55);
+  --glass:rgba(255,255,255,.76);
+  --glass-brd:rgba(255,255,255,.88);
+  --beach-photo:url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80');
+  --beach-photo-2:url('https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1600&q=80');
+  --font-display:'Baloo 2','Baloo2 Fallback',system-ui,sans-serif;
+  --font-body:'Be Vietnam Pro','BeViet Fallback',system-ui,sans-serif;
+  --maxw:1320px;
+}
+*{box-sizing:border-box}
+/* Metric-matched fallbacks: shown instantly while the web fonts load, sized
+   close to the real faces so the swap doesn't shift the layout (less jank). */
+@font-face{font-family:'Baloo2 Fallback';src:local('Arial');size-adjust:104%;ascent-override:90%;descent-override:24%;line-gap-override:0%}
+@font-face{font-family:'BeViet Fallback';src:local('Arial');size-adjust:100%;ascent-override:94%;descent-override:24%;line-gap-override:0%}
+html{scroll-behavior:smooth}
+body{
+  margin:0; font-family:var(--font-body); color:var(--ink);
+  background:
+    linear-gradient(180deg, rgba(6, 56, 79, .18), rgba(255, 255, 255, .92) 18%, rgba(242, 251, 255, .98) 100%),
+    var(--beach-photo) center top/cover no-repeat fixed;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+h1,h2,h3,h4{font-family:var(--font-display); margin:0; line-height:1.02; font-weight:700}
+p{margin:0}
+a{color:inherit; text-decoration:none}
+button{font-family:var(--font-body); cursor:pointer; border:0; background:none}
+img{max-width:100%; display:block}
+.wrap{max-width:var(--maxw); margin:0 auto; padding:0 28px}
+.eyebrow{font-family:var(--font-display); font-weight:600; letter-spacing:.18em;
+  text-transform:uppercase; font-size:.82rem; color:var(--deep)}
+
+/* ---------- floating motion utilities ---------- */
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+@keyframes floaty-sm{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+@keyframes sway{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(3deg)}}
+@keyframes drift{from{transform:translateX(-15vw)}to{transform:translateX(115vw)}}
+@keyframes wave-move{from{background-position-x:0}to{background-position-x:1600px}}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-1deg)}50%{transform:translateY(-6px) rotate(1deg)}}
+@keyframes spin-slow{to{transform:rotate(360deg)}}
+@keyframes pop-in{0%{opacity:0;transform:translateY(30px) scale(.9)}100%{opacity:1;transform:none}}
+@keyframes pin-bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+@keyframes shine{0%{transform:translateX(-120%)}60%,100%{transform:translateX(220%)}}
+
+.reveal{opacity:1}
+.js-anim .reveal{opacity:0; transform:translateY(40px); transition:opacity .6s ease, transform .6s cubic-bezier(.2,.7,.2,1)}
+.js-anim .reveal.in{opacity:1; transform:none}
+
+/* ====================== NAVBAR ====================== */
+.nav{position:fixed; top:0; left:0; right:0; z-index:60; transition:all .3s ease;
+  padding:18px 0;}
+.nav.scrolled{background:rgba(255,255,255,.82); backdrop-filter:blur(14px);
+  box-shadow:0 10px 30px -16px rgba(0,90,130,.5); padding:11px 0}
+.nav-inner{display:flex; align-items:center; gap:24px}
+.logo{display:flex; align-items:center; gap:2px; cursor:pointer; user-select:none}
+.logo-mark{font-family:var(--font-display); font-weight:700; font-size:2rem; color:#fff;
+  text-shadow:0 2px 0 var(--deep), 0 4px 10px rgba(0,70,110,.5); letter-spacing:-1px;
+  display:flex; align-items:baseline; gap:1px}
+.nav.scrolled .logo-mark{color:var(--deep); text-shadow:0 1px 0 rgba(255,255,255,.6)}
+.logo-mark .seven{color:var(--sun); transform:rotate(8deg); display:inline-block}
+.logo-sub{font-family:var(--font-display); font-weight:600; font-size:.62rem; letter-spacing:.42em;
+  color:#fff; opacity:.95; margin-top:-4px}
+.nav.scrolled .logo-sub{color:var(--deep)}
+.nav-links{display:flex; gap:6px; margin:0 auto}
+.nav-links a{font-family:var(--font-display); font-weight:500; font-size:.95rem; color:#fff;
+  padding:8px 14px; border-radius:999px; transition:.2s; text-shadow:0 1px 6px rgba(0,60,90,.4); white-space:nowrap}
+.nav.scrolled .nav-links a{color:var(--ink); text-shadow:none}
+.nav-links a:hover,.nav-links a.active{background:rgba(255,255,255,.22); color:#fff; text-shadow:none}
+.nav.scrolled .nav-links a:hover,.nav.scrolled .nav-links a.active{background:var(--ocean); color:#fff}
+.nav-tools{display:flex; gap:10px}
+.icon-btn{width:46px; height:46px; border-radius:999px; display:grid; place-items:center;
+  background:rgba(255,255,255,.25); border:2px solid rgba(255,255,255,.6); color:#fff;
+  backdrop-filter:blur(6px); transition:.2s; font-size:1.1rem}
+.nav.scrolled .icon-btn{background:#fff; border-color:var(--sky); color:var(--deep)}
+.icon-btn:hover{transform:scale(1.08); background:var(--sun); color:var(--ink); border-color:var(--sun)}
+.icon-btn.playing{background:var(--sun); color:var(--ink); border-color:var(--sun)}
+
+/* ====================== HERO ====================== */
+.hero,.main{position:relative; min-height:100vh; overflow:hidden;
+  background:
+    linear-gradient(180deg, rgba(7, 87, 122, .55) 0%, rgba(42, 185, 239, .35) 30%, rgba(255, 247, 232, .82) 68%, rgba(255,255,255,.98) 100%),
+    var(--beach-photo) center/cover no-repeat;
+}
+.hero-scene,.main-scene{position:absolute; inset:0; z-index:1}
+/* sun */
+.sun{position:absolute; top:11%; right:34%; width:120px; height:120px; border-radius:50%;
+  background:radial-gradient(circle,#fff6cf 0%,var(--sun) 55%,rgba(255,217,61,0) 72%);
+  box-shadow:0 0 90px 30px rgba(255,217,61,.45); animation:spin-slow 60s linear infinite}
+.sun::after{content:""; position:absolute; inset:-40%; border-radius:50%;
+  background:radial-gradient(circle, rgba(255,247,200,.55), transparent 60%)}
+/* clouds */
+.cloud{position:absolute; background:#fff; border-radius:100px; opacity:.95;
+  filter:drop-shadow(0 10px 14px rgba(120,180,210,.25))}
+.cloud::before,.cloud::after{content:""; position:absolute; background:#fff; border-radius:50%}
+.cloud.c1{top:14%; left:8%; width:140px; height:42px; animation:drift 60s linear infinite}
+.cloud.c2{top:9%; left:50%; width:100px; height:34px; animation:drift 80s linear infinite; animation-delay:-30s}
+.cloud.c3{top:26%; left:20%; width:180px; height:50px; animation:drift 95s linear infinite; animation-delay:-50s; opacity:.85}
+.cloud::before{width:60%; height:160%; top:-55%; left:12%}
+.cloud::after{width:42%; height:130%; top:-32%; right:14%}
+/* birds */
+.bird{position:absolute; width:26px; height:14px; opacity:.7}
+.bird::before,.bird::after{content:""; position:absolute; top:0; width:14px; height:14px;
+  border:2.5px solid #3d6d86; border-radius:50%; border-color:#3d6d86 transparent transparent transparent;
+  transform:rotate(45deg)}
+.bird::after{left:11px; transform:rotate(-45deg) scaleX(-1)}
+.b1{top:18%; left:42%; animation:drift 38s linear infinite, floaty-sm 3s ease-in-out infinite}
+.b2{top:23%; left:48%; transform:scale(.7); animation:drift 46s linear infinite; animation-delay:-12s}
+.b3{top:15%; left:60%; transform:scale(.85); animation:drift 52s linear infinite; animation-delay:-26s}
+
+/* mountains / coastline */
+.coast{position:absolute; bottom:24%; left:0; right:0; height:46%; z-index:2}
+.mtn{position:absolute; bottom:0; border-radius:50% 50% 0 0/100% 100% 0 0}
+.mtn.m1{left:-4%; width:46%; height:200px; background:linear-gradient(160deg,#4fae66,#2f8f4d)}
+.mtn.m2{left:18%; width:38%; height:150px; background:linear-gradient(160deg,#62bd77,#3a9b57)}
+.mtn.m3{right:-2%; width:44%; height:230px; background:linear-gradient(200deg,#3f9f59,#2c7f47)}
+
+/* ocean band */
+.ocean{position:absolute; bottom:0; left:0; right:0; height:30%; z-index:3;
+  background:linear-gradient(180deg,#4ddcff 0%,#19b5f2 55%,#0d75a6 100%)}
+.ocean .waves{position:absolute; top:-12px; left:0; right:0; height:24px;
+  background:radial-gradient(circle at 20px -6px, transparent 14px, #22b6e8 15px) repeat-x;
+  background-size:40px 24px; animation:wave-move 6s linear infinite}
+.sparkle{position:absolute; width:6px; height:6px; border-radius:50%; background:#fff; opacity:.0;
+  animation:twk 3s ease-in-out infinite}
+@keyframes twk{0%,100%{opacity:0;transform:scale(.4)}50%{opacity:.9;transform:scale(1)}}
+
+/* hero foreground content */
+.hero-grid,.main-grid{position:relative; z-index:10; max-width:var(--maxw); margin:0 auto; padding:140px 28px 40px;
+  display:grid; grid-template-columns:1.05fr .95fr; align-items:center; gap:20px; min-height:100vh}
+.hero-title,.main-title{font-size:clamp(3rem,7vw,6.2rem); line-height:.92; letter-spacing:-1px;
+  text-transform:uppercase; color:#fff;
+  text-shadow:0 3px 0 #1598c8, 0 6px 0 #0077a8, 0 10px 22px rgba(0,80,120,.38);
+  filter:drop-shadow(0 6px 0 rgba(0,119,168,.2))}
+.hero-title .yellow,.main-title .yellow{color:var(--sun); text-shadow:0 3px 0 #e6aa00, 0 6px 0 #c99200, 0 12px 22px rgba(120,80,0,.32)}
+.hero-title .sm,.main-title .sm{display:block; font-size:.62em}
+.hero-slogan,.main-slogan{display:inline-flex; align-items:center; gap:12px; margin-top:18px;
+  background:rgba(255,255,255,.28); border:2px solid rgba(255,255,255,.6); backdrop-filter:blur(6px);
+  padding:9px 20px; border-radius:999px; font-family:var(--font-display); font-weight:600;
+  letter-spacing:.12em; color:#fff; text-shadow:0 1px 6px rgba(0,60,90,.4); font-size:1.05rem; white-space:nowrap}
+.hero-slogan .dot,.main-slogan .dot{width:10px; height:10px; border-radius:50%; background:var(--coral); box-shadow:0 0 0 3px rgba(255,79,163,.28)}
+.theme-tag{margin-top:14px; font-family:var(--font-display); font-weight:600; color:#fff;
+  text-shadow:0 1px 8px rgba(0,60,90,.5); font-size:1.15rem}
+.theme-tag b{color:var(--sand)}
+
+/* countdown card */
+.countdown{margin-top:22px; display:inline-block; background:var(--glass); border:2px solid var(--glass-brd);
+  border-radius:26px; padding:16px 22px 18px; box-shadow:var(--shadow-card); backdrop-filter:blur(12px)}
+.countdown .cap{font-family:var(--font-display); font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  font-size:.78rem; color:var(--deep); text-align:center; margin-bottom:8px}
+.cd-row{display:flex; gap:8px}
+.cd-cell{min-width:66px; text-align:center}
+.cd-num{font-family:var(--font-display); font-weight:700; font-size:2.5rem; color:var(--deep); line-height:1;
+  background:linear-gradient(180deg,var(--ocean),var(--deep)); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent}
+.cd-lab{font-family:var(--font-display); font-weight:600; font-size:.68rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ink-soft); margin-top:3px}
+.cd-sep{align-self:flex-start; font-family:var(--font-display); font-weight:700; font-size:2rem; color:var(--sky)}
+
+/* CTA buttons */
+.cta-row{display:flex; gap:14px; margin-top:24px; flex-wrap:wrap}
+.btn{display:inline-flex; align-items:center; gap:10px; font-family:var(--font-display); font-weight:600;
+  font-size:1.05rem; padding:15px 28px; border-radius:999px; transition:transform .18s cubic-bezier(.2,.8,.2,1), box-shadow .2s;
+  position:relative; overflow:hidden; white-space:nowrap}
+.btn .ic{font-size:1.15rem}
+.btn-primary{background:linear-gradient(180deg,var(--sun),#f5b800); color:#7a4d00;
+  box-shadow:0 12px 24px -8px rgba(245,184,0,.7), inset 0 2px 0 rgba(255,255,255,.6)}
+.btn-primary:hover{transform:translateY(-3px) scale(1.03)}
+.btn-ghost{background:rgba(255,255,255,.9); color:var(--deep); box-shadow:var(--shadow-soft)}
+.btn-ghost:hover{transform:translateY(-3px) scale(1.03); background:#fff}
+.btn::after{content:""; position:absolute; top:0; bottom:0; width:40%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent); transform:translateX(-120%)}
+.btn:hover::after{animation:shine .9s ease}
+
+/* hero right: bus + road */
+.hero-right{position:relative; height:560px}
+/* weather forecast card (above the bus) */
+.wx-card{position:absolute; top:-26px; left:0; right:0; z-index:20; color:#fff; overflow:hidden;
+  background:linear-gradient(135deg,#0b6f9a,#19b5f2 58%,#ff5aae);
+  border:1px solid rgba(255,255,255,.14); border-radius:16px;
+  box-shadow:0 22px 44px -18px rgba(0,30,55,.6); font-family:var(--font-body)}
+.wx-top{display:flex; justify-content:space-between; align-items:center; gap:8px; flex-wrap:wrap; padding:9px 14px;
+  background:linear-gradient(90deg,rgba(0,0,0,.28),transparent)}
+.wx-ttl{font-family:var(--font-display); font-weight:700; letter-spacing:.03em; font-size:.82rem; white-space:nowrap}
+.wx-loc{font-family:var(--font-display); font-weight:700; font-size:.72rem; color:#06283d; white-space:nowrap;
+  background:linear-gradient(90deg,#37e0ff,#16b6e8); padding:5px 12px; border-radius:6px}
+.wx-days{display:grid; grid-template-columns:repeat(var(--wxn,4),1fr)}
+.wx-loading{grid-column:1/-1; text-align:center; padding:22px 0; color:#bfe6ff; font-weight:700; font-size:.85rem}
+.wx-day{padding:12px 6px 14px; text-align:center; position:relative}
+.wx-day+.wx-day::before{content:""; position:absolute; left:0; top:14%; bottom:14%; width:1px; background:rgba(255,255,255,.14)}
+.wx-dname{font-weight:800; font-size:.72rem; color:#bfe6ff; margin-bottom:6px; white-space:nowrap; text-transform:uppercase; letter-spacing:.02em}
+.wx-dicon{font-size:1.6rem; line-height:1}
+.wx-dtemp{font-family:var(--font-display); font-weight:700; font-size:1.5rem; margin-top:5px; line-height:1}
+.wx-dtemp span{color:#37e0ff}
+.wx-dnight{font-size:.66rem; color:#9fc4dd; font-weight:700; margin-top:3px; white-space:nowrap}
+.road-curve{position:absolute; right:-90px; bottom:-30px; width:120%; height:360px;
+  background:linear-gradient(180deg,#fff7e8,#efd59b); border-radius:80px 0 0 0; transform:rotate(-6deg);
+  box-shadow:0 30px 50px -20px rgba(0,40,60,.5)}
+.road-curve::before{content:""; position:absolute; top:48%; left:6%; right:10%; height:6px;
+  background:repeating-linear-gradient(90deg,var(--sun) 0 36px, transparent 36px 64px); border-radius:6px; opacity:.95; transform:rotate(-3deg)}
+.bus-slot{position:absolute; z-index:5; left:6%; top:36%; width:90%; height:58%;
+  animation:bob 3.2s ease-in-out infinite; filter:drop-shadow(0 26px 24px rgba(0,40,70,.4))}
+.guardrail{position:absolute; left:-30px; bottom:34%; width:60%; height:10px; border-radius:6px;
+  background:repeating-linear-gradient(90deg,#cdd6dd 0 30px, #9fb0bb 30px 36px); transform:rotate(-7deg); opacity:.9}
+
+/* lighthouse + palm decorative */
+.palm{position:absolute; bottom:22%; z-index:4; transform-origin:bottom center; animation:sway 5s ease-in-out infinite}
+.palm .trunk{width:14px; height:120px; margin:0 auto; border-radius:8px; background:linear-gradient(90deg,#a9784a,#7d5630)}
+.palm .leaf{position:absolute; top:-6px; left:50%; width:80px; height:26px; border-radius:0 100% 0 100%;
+  background:linear-gradient(120deg,#3fae5c,#2c8f49); transform-origin:left center}
+.palm .l1{transform:translateX(-2px) rotate(-30deg)} .palm .l2{transform:translateX(-2px) rotate(8deg)}
+.palm .l3{transform:translateX(-2px) rotate(46deg) scaleX(-1)} .palm .l4{transform:translateX(-78px) rotate(150deg)}
+.palm .l5{transform:translateX(-78px) rotate(200deg)}
+.palm.p1{left:3%; transform:scale(1.1)} .palm.p2{right:8%; bottom:30%; transform:scale(.8); animation-delay:-2s}
+
+/* road sign */
+.signpost{position:absolute; right:5%; bottom:8%; z-index:12; animation:floaty 5s ease-in-out infinite}
+.sign{background:linear-gradient(180deg,var(--coral),#e7398f); color:#fff; font-family:var(--font-display);
+  font-weight:700; padding:12px 26px; border-radius:10px; box-shadow:0 14px 24px -10px rgba(60,30,0,.6);
+  border:3px solid #ffd7ea; text-align:center; line-height:1.05}
+.sign .road-to{font-size:.8rem; letter-spacing:.2em; opacity:.9}
+.sign .place{font-size:1.7rem; color:var(--sun)}
+.signpost .pole{width:12px; height:54px; margin:0 auto; background:linear-gradient(90deg,#6b4424,#4d2f17); border-radius:0 0 4px 4px}
+
+/* curved divider into roadmap */
+.hero-fade{position:absolute; bottom:0; left:0; right:0; height:90px; z-index:11;
+  background:#10bdeb; clip-path:polygon(0 60%,8% 40%,22% 62%,38% 38%,54% 64%,70% 40%,86% 60%,100% 42%,100% 100%,0 100%)}
+
+/* ====================== ROADMAP MENU ====================== */
+.roadmap{position:relative;
+  background:
+    linear-gradient(180deg, rgba(7, 89, 125, .88) 0%, rgba(16, 164, 224, .86) 42%, rgba(255, 248, 235, .94) 100%),
+    var(--beach-photo-2) center/cover no-repeat;
+  padding:40px 0 120px; overflow:hidden}
+.roadmap .sea-deco{position:absolute; inset:0; z-index:1; opacity:.5}
+.roadmap .island{position:absolute; border-radius:50%/40% 40% 60% 60%; background:linear-gradient(180deg,#52b86a,#2f8f4d);
+  box-shadow:0 14px 26px -10px rgba(0,40,60,.4)}
+.isl1{width:160px;height:70px;bottom:8%;left:4%} .isl2{width:120px;height:54px;top:20%;right:8%}
+.isl3{width:90px;height:40px;bottom:30%;right:30%}
+.roadmap-head{position:relative; z-index:5; text-align:center; color:#fff; margin-bottom:10px}
+.roadmap-head h2{font-size:clamp(2rem,4vw,3rem); text-shadow:0 3px 0 #066ba0, 0 6px 16px rgba(0,40,70,.4)}
+.roadmap-head h2 .y{color:var(--sun)}
+.roadmap-head p{margin-top:8px; font-weight:600; color:#eafaff; opacity:.92}
+.endpoint{position:absolute; z-index:6; top:8px; font-family:var(--font-display); font-weight:700; color:#fff;
+  background:linear-gradient(180deg,var(--coral),#e7398f); padding:8px 18px; border-radius:8px; border:3px solid #ffd7ea;
+  box-shadow:0 12px 20px -10px rgba(40,20,0,.6); font-size:1.05rem}
+.endpoint.start{left:3%} .endpoint.end{right:3%}
+
+/* the journey track */
+.track{position:relative; z-index:5; max-width:var(--maxw); margin:36px auto 0; padding:0 28px}
+.track-road{position:relative; height:230px; margin-top:120px}
+.road-svg{position:absolute; inset:0; width:100%; height:100%; overflow:visible}
+.map-bus{position:absolute; left:0; top:0; width:74px; height:42px; z-index:8;
+  transition:transform .12s linear; filter:drop-shadow(0 8px 8px rgba(0,30,50,.4))}
+.map-bus .body{width:100%; height:30px; background:linear-gradient(180deg,var(--coral),#e7398f); border-radius:10px 12px 8px 8px;
+  position:relative; box-shadow:inset 0 -6px 0 rgba(0,0,0,.12)}
+.map-bus .win{position:absolute; top:6px; left:10px; right:14px; height:10px; border-radius:4px;
+  background:linear-gradient(180deg,#bfe9ff,#8fd0f5)}
+.map-bus .wheel{position:absolute; bottom:-6px; width:14px; height:14px; border-radius:50%; background:#222; border:3px solid #555}
+.map-bus .wl{left:10px} .map-bus .wr{right:12px}
+
+/* checkpoint cards */
+.checkpoints{position:relative; z-index:7; display:flex; flex-wrap:wrap; justify-content:center; gap:18px;
+  max-width:var(--maxw); margin:0 auto; padding:0 28px}
+.ck{width:210px; background:var(--glass); border:1.5px solid var(--glass-brd); border-radius:22px;
+  padding:16px; box-shadow:var(--shadow-card); backdrop-filter:blur(12px); cursor:pointer;
+  transition:transform .25s cubic-bezier(.2,.8,.2,1), box-shadow .25s; position:relative;
+  animation:floaty 5s ease-in-out infinite}
+.ck:hover{transform:translateY(-10px) rotate(-1.2deg) scale(1.03); box-shadow:0 30px 50px -20px rgba(0,70,110,.6)}
+.ck .num{position:absolute; top:-14px; left:16px; width:38px; height:38px; border-radius:12px; rotate:-8deg;
+  display:grid; place-items:center; font-family:var(--font-display); font-weight:700; font-size:1.05rem; color:#fff;
+  box-shadow:0 8px 14px -6px rgba(0,0,0,.4)}
+.ck .ck-ic{width:54px; height:54px; border-radius:16px; display:grid; place-items:center; font-size:1.7rem;
+  margin:8px 0 12px; background:#eaf7ff}
+.ck h4{font-size:1.05rem; color:var(--ink); letter-spacing:.02em}
+.ck .lab{font-size:.85rem; color:var(--ink-soft); font-weight:600; margin-top:4px}
+.ck .pin{position:absolute; bottom:-46px; left:50%; transform:translateX(-50%); width:24px; height:34px;
+  animation:pin-bounce 2.4s ease-in-out infinite}
+.ck .pin .head{width:24px; height:24px; border-radius:50% 50% 50% 0; rotate:-45deg; box-shadow:0 6px 8px -3px rgba(0,0,0,.4)}
+.ck .pin .head::after{content:""; position:absolute; top:7px; left:7px; width:10px; height:10px; background:#fff; border-radius:50%; rotate:45deg}
+
+.sound-hint{position:relative; z-index:6; text-align:center; color:#eafaff; opacity:.85; margin-top:90px; font-weight:600}
+
+@media (max-width:980px){
+  .hero-grid,.main-grid{grid-template-columns:1fr; padding-top:120px}
+  .hero-right{height:420px; margin-top:24px}
+  .wx-card{top:0}
+  .wx-ttl{font-size:.74rem}
+  .bus-slot{top:46%; height:50%}
+  .hero-slogan,.main-slogan{white-space:normal; font-size:.92rem}
+  .hero-title,.main-title{filter:none}
+  .nav-links{display:none}
+  .ck{width:31%}
+  .roadmap{padding-top:58px}
+  .endpoint{font-size:.82rem; padding:6px 12px}
+}
+@media (max-width:600px){
+  .ck{width:31.5%; padding:12px 6px}
+  .ck .num{width:30px; height:30px; font-size:.85rem; top:-12px; left:10px}
+  .ck .ck-ic{width:40px; height:40px; font-size:1.25rem; margin:6px 0 8px}
+  .ck h4{font-size:.8rem}
+  .ck .lab{font-size:.6rem}
+  .ck .pin{display:none}
+  .checkpoints{gap:10px}
+  .hero-title,.main-title{font-size:3rem}
+  .cd-cell{min-width:54px}
+  .cd-num{font-size:2rem}
+  .hero-right{height:380px}
+  .wx-ttl{font-size:.66rem}
+  .wx-loc{font-size:.6rem; padding:4px 8px}
+  .wx-dtemp{font-size:1.3rem}
+  .wx-dicon{font-size:1.35rem}
+  .wx-dname{font-size:.66rem}
+  .wx-day{padding:10px 4px 12px}
+  .bus-slot{top:50%; height:46%}
+  .roadmap{padding-top:72px}
+  .endpoint{font-size:.72rem; padding:5px 9px; border-width:2px}
+  .endpoint.start{left:2%} .endpoint.end{right:2%}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:.001s !important; animation-iteration-count:1 !important}
+  .reveal{transition:none; opacity:1; transform:none}
+}
