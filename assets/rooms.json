@@ -39,7 +39,7 @@
     "note": ""
   },
   {
-    "ldap": "vddung1",
+    "ldap": "vhdung1",
     "bus": "1",
     "room": "2",
     "members": [
@@ -619,7 +619,7 @@
     "note": ""
   },
   {
-    "ldap": "dtttnhan",
+    "ldap": "dttnhan",
     "bus": "2",
     "room": "31",
     "members": [
