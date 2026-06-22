@@ -24,7 +24,7 @@
   let ITINERARY = [
     {
       day: 'Ngày 1 (31/7-Thứ 6)', sub: 'HÀ NỘI → HẠ LONG → TEAM BUILDING', items: [
-        { time: '07:30', t: 'Xe và HDV đón đoàn tại công ty đi Hạ Long.', ic: '🚌', d: 'Xe và Hướng dẫn viên đón đoàn tại công ty, bắt đầu hành trình mùa hè.', loc: 'Hà Nội', note: 'Tập trung đúng giờ' },
+        { time: '09:15', t: 'Xe và HDV đón đoàn tại công ty đi Hạ Long.', ic: '🚌', d: 'Xe và Hướng dẫn viên đón đoàn tại công ty, bắt đầu hành trình mùa hè.', loc: 'Hà Nội', note: 'Tập trung đúng giờ' },
         { time: '10:30', t: 'Đến Quảng Ninh – Bảo tàng Quảng Ninh.', ic: '🏛️', d: 'Đoàn đến Quảng Ninh, ghé thăm quan bảo tàng Quảng Ninh, chụp ảnh tập thể tại bảo tàng.', loc: 'Quảng Ninh', note: '' },
         { time: '12:00', t: 'Ăn trưa tại nhà hàng địa phương.', ic: '🍽️', d: 'Ăn trưa ở nhà hàng địa phương.', loc: 'Quảng Ninh', note: '' },
         { time: '12:30', t: 'Đến khách sạn nhận phòng nghỉ ngơi.', ic: '🏨', d: 'Đến khách sạn nhận phòng nghỉ ngơi (giờ check-in thường từ 14-15h tuỳ khách sạn nhưng KS sẽ ưu tiên nhận phòng sớm nếu có phòng trống).', loc: 'Hạ Long', note: '' },
@@ -52,8 +52,8 @@
   ];
 
   const INCLUDES = [
-    { ic: '🚌', t: '03 xe 35 chỗ đời mới' }, { ic: '🏨', t: '02 đêm KS 5 sao' },
-    { ic: '🍽️', t: 'Các bữa ăn theo chương trình' }, { ic: '🎟️', t: 'Vé vui chơi khu du lịch Sunworld' },
+    { ic: '🚌', t: '03 xe 45 chỗ đời mới' }, { ic: '🏨', t: '02 đêm KS 5 sao' },
+    { ic: '🍽️', t: 'Các bữa ăn theo chương trình' }, { ic: '🎟️', t: 'Vé vui chơi khu du lịch Sunworld: tour đã đăng ký' },
     { ic: '🎯', t: 'Team Building' }, { ic: '🎆', t: 'Gala Dinner' },
     { ic: '🧑‍✈️', t: 'Hướng dẫn viên' }, { ic: '💧', t: 'Nước uống 2 chai/ngày' },
     { ic: '🧊', t: 'Overnight vui chơi tới bến với game (ma sói, chia lại lương,.."' }, { ic: '🛡️', t: 'Bảo hiểm du lịch' },
@@ -237,18 +237,18 @@
     ];
 
     const FAQ = [
-      { q: 'Mấy giờ tập trung khởi hành?', a: 'Đoàn tập trung và khởi hành lúc 07:30 ngày 31/07/2026 tại công ty. Vui lòng có mặt trước 15 phút.' },
-      { q: 'Đoàn di chuyển bằng phương tiện gì?', a: '03 xe 35 chỗ đời mới cùng hướng dẫn viên V đồng hành suốt hành trình.' },
+      { q: 'Mấy giờ tập trung khởi hành?', a: 'Đoàn tập trung và khởi hành lúc 09:15 ngày 31/07/2026 tại công ty. Vui lòng có mặt trước 15 phút.' },
+      { q: 'Đoàn di chuyển bằng phương tiện gì?', a: '03 xe 45 chỗ đời mới cùng hướng dẫn viên V đồng hành suốt hành trình.' },
       { q: 'Khách sạn lưu trú ở đâu?', a: 'Khách sạn 5 sao tại Hạ Long, Quảng Ninh — 02 đêm, tiêu chuẩn 02 khách/phòng.https://royalhalonghotel.com/' },
-      { q: 'Team Building diễn ra lúc nào?', a: 'Chiều Ngày 1 lúc 15:30-17:00 tại bãi biển, chủ đề "Kết Sức Mạnh – Nối Thành Công".' },
+      { q: 'Team Building diễn ra lúc nào?', a: 'Chiều Ngày 1 lúc 16:00-17:30 tại bãi biển, chủ đề "Kết Sức Mạnh – Nối Thành Công".' },
       { q: 'Gala Dinner nên mặc gì?', a: 'Dress code: Tự do, đẹp là được. BTC sẽ cập nhật tùy thời tiết.' },
       { q: 'Cần mang theo giấy tờ gì?', a: 'CCCD/hộ chiếu bản gốc, đồ bơi, kem chống nắng, thuốc cá nhân và một ít tiền mặt cho trường hợp cần chia lại kpi (chúng tôi không khuyến khích cá độ cờ bạc,..).' }
     ];
 
   const BTC = [
     { role: 'Ban tổ chức', name: 'Bùi Thị Bảo Ngọc', ldap: 'btbngoc@cmcglobal.vn', ph: '0707308154' },
-    { role: 'Ban tổ chức', name: 'Lê Văn Đào', ldap: 'lvdao@cmcglobal.vn', ph: '0984361797' },
-    { role: 'Ban tổ chức', name: 'Trương Thị Ngọc Diệp', ldap: 'ttndiep@cmcglobal.vn', ph: '0377849921' },
+    { role: 'Ban tổ chức', name: 'Lê Văn Đào', ldap: 'lvdao1@cmcglobal.vn', ph: '0984361797' },
+    { role: 'Ban tổ chức', name: 'Trương Thị Ngọc Diệp', ldap: 'ttndiep8@cmcglobal.vn', ph: '0377849921' },
     
   ];
 
@@ -379,7 +379,7 @@
     root.innerHTML = '';
     let f = (filter || '').trim().toLowerCase();
     if (f.includes('@')) f = f.split('@')[0];
-    if (f.length < 2) { root.appendChild(el('div', 'no-result', '🔒 Nhập LDAP của bạn (vd: Hvan) để xem số xe bus, số phòng & danh sách bạn cùng phòng.')); return; }
+    if (f.length < 2) { root.appendChild(el('div', 'no-result', '🔒 Nhập LDAP của bạn (vd: Hvan) để xem số xe bus, số phòng & danh sách bạn cùng phòng. LƯU Ý:số phòng ở đây không phải là số phòng thực tế, số phòng thực tế sẽ được cung cấp khi check in tại khách sạn.BTC không xử lý đổi phòng, các cá nhân có thể tự thương lượng và đổi phòng cho phù hợp với nhu cầu cá nhân. Các chi phí riêng phát sinh thêm trong phòng sẽ được các cá nhân thanh toán với khách sạn khi check out.')); return; }
     const list = ROOMS.filter(r => r.ldap.toLowerCase() === f);
     if (!list.length) { root.appendChild(el('div', 'no-result', '😅 Không tìm thấy LDAP này. Kiểm tra lại hoặc liên hệ BTC nhé!')); return; }
     list.forEach(r => { const c = el('div', 'room-card'); c.innerHTML = roomCardHTML(r); root.appendChild(c); });
@@ -569,15 +569,18 @@ function renderExplore() {
       .catch(() => { days.innerHTML = '<div class="wx-loading">Chưa tải được dự báo Hạ Long 🌊</div>'; });
   }
 
-  /* ============ song registration (Firebase realtime + localStorage fallback) ============ */
+  /* ============ song registration (Google Apps Script Centralized Storage) ============ */
   const SONG_KEY = 'g2_songs_v1';
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbx1zSupRFdUQyad_xnj5PVGZ6dbMvN0SNSfVGflbRWPQO9GuBW8lB_PV-32Y0wR1u-2/exec';
   const SONG_SEED = [
-    { ldap: 'vtdhien', song: 'Việt Nam Ơi', t: Date.now() - 5400000 },
-    { ldap: 'ptkhoi', song: 'Chúng Ta Của Hiện Tại', t: Date.now() - 1800000 },
+    { ldap: 'vhdung', song: 'Việt Nam Ơi', t: Date.now() - 5400000 },
+    { ldap: 'ldquan', song: 'Gánh mẹ', t: Date.now() - 1800000 },
   ];
+  
   function esc(x) { return String(x).replace(/[<>&"]/g, c => ({ '<': '&lt;', '>': '&gt;', '&': '&amp;', '"': '&quot;' }[c])); }
   function loadSongs() { try { const a = JSON.parse(localStorage.getItem(SONG_KEY)); return Array.isArray(a) ? a : SONG_SEED.slice(); } catch (e) { return SONG_SEED.slice(); } }
   function saveSongs(a) { try { localStorage.setItem(SONG_KEY, JSON.stringify(a.slice(0, 50))); } catch (e) { } }
+  
   function renderSongList(arr) {
     const list = $('#songList'); if (!list) return;
     list.innerHTML = '';
@@ -591,47 +594,83 @@ function renderExplore() {
       list.appendChild(it);
     });
   }
+
+  // Hàm lấy danh sách bài hát từ Google Apps Script về hiển thị công khai
+  async function loadSongsFromServer() {
+    try {
+      const response = await fetch(`${WEB_APP_URL}?action=getSongs`);
+      const data = await response.json();
+      if (Array.isArray(data) && data.length > 0) {
+        saveSongs(data); // Lưu bản sao vào localStorage làm fallback cứu cánh
+        renderSongList(data);
+      } else if (Array.isArray(data)) {
+        renderSongList([]);
+      }
+    } catch (e) {
+      console.warn('Không thể tải từ Server, dùng localStorage tạm thời:', e);
+      renderSongList(loadSongs());
+    }
+  }
+
   function flashBtn(form) {
     const b = form.querySelector('button'); if (!b) return; const o = b.textContent;
     b.textContent = 'Đã đăng ký! 🎉'; setTimeout(() => b.textContent = o, 1500);
   }
-  function initFirebaseSongs() {
-    if (!window.FIREBASE_CONFIG || !window.firebase || !firebase.database) return null;
-    try {
-      if (!firebase.apps || !firebase.apps.length) firebase.initializeApp(window.FIREBASE_CONFIG);
-      return firebase.database().ref('songs');
-    } catch (e) { console.warn('Firebase init failed, dùng localStorage:', e); return null; }
-  }
+
   function songInit() {
     const form = $('#songForm'); if (!form) return;
     const hint = $('#songHint');
-    const ref = initFirebaseSongs();
-    if (ref) {
-      if (hint) hint.textContent = '🌐 Đăng ký realtime — cả đoàn cùng thấy ngay!';
-      ref.limitToLast(50).on('value', snap => {
-        const arr = []; snap.forEach(c => { const v = c.val(); if (v && v.song) arr.push(v); });
-        arr.sort((a, b) => (b.t || 0) - (a.t || 0));
-        renderSongList(arr);
-      }, () => { renderSongList(loadSongs()); });
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        let ldap = $('#songLdap').value.trim(); let song = $('#songName').value.trim();
-        if (ldap.includes('@')) ldap = ldap.split('@')[0];
-        if (!ldap || !song) { if (hint) hint.textContent = 'Nhập cả LDAP và tên bài hát nhé! 🙏'; return; }
-        ref.push({ ldap, song, t: Date.now() });
-        $('#songLdap').value = ''; $('#songName').value = ''; flashBtn(form);
-      });
-      return;
-    }
-    if (localStorage.getItem(SONG_KEY) === null) saveSongs(SONG_SEED.slice());
-    renderSongList(loadSongs());
-    form.addEventListener('submit', e => {
+    const btn = $('#songSubmit') || form.querySelector('button');
+
+    if (hint) hint.textContent = '🌐 Đăng ký trực tuyến — tải lại trang là thấy ngay!';
+    
+    // 1. Khởi chạy: Tải danh sách từ Server về ngay khi load trang
+    loadSongsFromServer();
+
+    // 2. Cơ chế Auto-refresh: Cứ mỗi 5 giây tự động kéo data mới về để cập nhật danh sách ngầm
+    setInterval(loadSongsFromServer, 5000);
+
+    // 3. Xử lý sự kiện gửi Form Đăng ký
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      let ldap = $('#songLdap').value.trim(); let song = $('#songName').value.trim();
+      
+      let ldap = $('#songLdap').value.trim(); 
+      let song = $('#songName').value.trim();
+      
       if (ldap.includes('@')) ldap = ldap.split('@')[0];
-      if (!ldap || !song) { if (hint) hint.textContent = 'Nhập cả LDAP và tên bài hát nhé! 🙏'; return; }
-      const songs = loadSongs(); songs.unshift({ ldap, song, t: Date.now() }); saveSongs(songs);
-      $('#songLdap').value = ''; $('#songName').value = ''; renderSongList(loadSongs()); flashBtn(form);
+      if (!ldap || !song) { 
+        if (hint) hint.textContent = '⚠️ Nhập cả LDAP và tên bài hát nhé! 🙏'; 
+        return; 
+      }
+
+      // Trạng thái đang gửi
+      if (btn) { btn.disabled = true; btn.textContent = 'Đang gửi...'; }
+      if (hint) hint.textContent = '⏳ Hệ thống đang ghi nhận...';
+
+      try {
+        // Gửi dữ liệu đồng bộ lên Google Apps Script
+        await fetch(WEB_APP_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ ldap, song, t: Date.now() })
+        });
+
+        // Xử lý Giao diện sau khi gửi thành công
+        $('#songLdap').value = ''; 
+        $('#songName').value = ''; 
+        if (hint) hint.textContent = '✅ Đăng ký thành công! Bài hát của bạn đã được ghi nhận.';
+        flashBtn(form);
+
+        // Đợi 1 giây cho Server cập nhật dữ liệu xong thì chủ động reload lại list mới
+        setTimeout(loadSongsFromServer, 1000);
+
+      } catch (err) {
+        if (hint) hint.textContent = '❌ Gửi thất bại, lỗi kết nối mạng. Vui lòng thử lại!';
+        console.error('Lỗi khi submit bài hát:', err);
+      } finally {
+        if (btn) btn.disabled = false;
+      }
     });
   }
 
