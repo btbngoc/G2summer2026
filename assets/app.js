@@ -571,7 +571,7 @@ function renderExplore() {
 
   /* ============ song registration (Google Apps Script Centralized Storage) ============ */
   const SONG_KEY = 'g2_songs_v1';
-  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbx1zSupRFdUQyad_xnj5PVGZ6dbMvN0SNSfVGflbRWPQO9GuBW8lB_PV-32Y0wR1u-2/exec';
+  const WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbwdjiKOgpGUX9uT-X2Ur19RwQlmcqdAmT9RNeszhXU44S6neUwUwpU_xszhcKtc7F-4/exec';
   const SONG_SEED = [
     { ldap: 'vhdung', song: 'Việt Nam Ơi', t: Date.now() - 5400000 },
     { ldap: 'ldquan', song: 'Gánh mẹ', t: Date.now() - 1800000 },
@@ -632,46 +632,53 @@ function renderExplore() {
 
     // 3. Xử lý sự kiện gửi Form Đăng ký
     form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      
-      let ldap = $('#songLdap').value.trim(); 
-      let song = $('#songName').value.trim();
-      
-      if (ldap.includes('@')) ldap = ldap.split('@')[0];
-      if (!ldap || !song) { 
+    e.preventDefault();
+    
+    let ldap = $('#songLdap').value.trim(); 
+    let song = $('#songName').value.trim();
+    
+    if (ldap.includes('@')) ldap = ldap.split('@')[0];
+    if (!ldap || !song) { 
         if (hint) hint.textContent = '⚠️ Nhập cả LDAP và tên bài hát nhé! 🙏'; 
         return; 
-      }
+    }
 
-      // Trạng thái đang gửi
-      if (btn) { btn.disabled = true; btn.textContent = 'Đang gửi...'; }
-      if (hint) hint.textContent = '⏳ Hệ thống đang ghi nhận...';
+    if (btn) { btn.disabled = true; btn.textContent = 'Đang gửi...'; }
+    if (hint) hint.textContent = '⏳ Hệ thống đang ghi nhận...';
 
-      try {
-        // Gửi dữ liệu đồng bộ lên Google Apps Script
+    // Khởi tạo biến IP mặc định phòng trường hợp lỗi mạng không lấy được IP
+    let userIp = "Không lấy được IP";
+    try {
+        // Tự động gọi API lấy IP công khai của mạng người dùng đang kết nối
+        const ipResponse = await fetch('https://ipify.org');
+        const ipData = await ipResponse.json();
+        userIp = ipData.ip;
+    } catch (ipErr) {
+        console.warn("Không thể lấy IP người dùng:", ipErr);
+    }
+
+    try {
+        // Gửi dữ liệu đồng bộ lên Google Apps Script kèm theo tham số IP
         await fetch(WEB_APP_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ ldap, song, t: Date.now() })
+            method: 'POST',
+            mode: 'no-cors',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ ldap, song, t: Date.now(), ip: userIp }) // Thêm trường ip vào đây
         });
 
-        // Xử lý Giao diện sau khi gửi thành công
         $('#songLdap').value = ''; 
         $('#songName').value = ''; 
         if (hint) hint.textContent = '✅ Đăng ký thành công! Bài hát của bạn đã được ghi nhận.';
         flashBtn(form);
 
-        // Đợi 1 giây cho Server cập nhật dữ liệu xong thì chủ động reload lại list mới
         setTimeout(loadSongsFromServer, 1000);
-
-      } catch (err) {
-        if (hint) hint.textContent = '❌ Gửi thất bại, lỗi kết nối mạng. Vui lòng thử lại!';
-        console.error('Lỗi khi submit bài hát:', err);
-      } finally {
+    } catch (err) {
+        if (hint) hint.textContent = '❌ Gửi thất bại, vui lòng thử lại!';
+        console.error(err);
+    } finally {
         if (btn) btn.disabled = false;
-      }
-    });
+    }
+});
   }
 
   /* ============ scroll-driven map bus ============ */
