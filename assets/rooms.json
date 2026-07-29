@@ -9,15 +9,6 @@
     "note": ""
   },
   {
-    "ldap": "vhdung1",
-    "bus": "1",
-    "room": "Vũ Hồng Dũng",
-    "members": [
-      "A1"
-    ],
-    "note": ""
-  },
-  {
     "ldap": "hvan",
     "bus": "1",
     "room": "Hoàng Vĩnh An, Hoàng Trí Dũng",
@@ -45,20 +36,11 @@
     "note": ""
   },
   {
-    "ldap": "dmthang2",
+    "ldap": "lqminh3",
     "bus": "1",
-    "room": "Đinh Mạnh Thắng, Nguyễn Duy Mạnh",
+    "room": "Cà Văn Quế, Lưu Quang Minh",
     "members": [
       "A3"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ldquan",
-    "bus": "1",
-    "room": "Lê Đức Quân, Phạm Văn Hiếu",
-    "members": [
-      "A4"
     ],
     "note": ""
   },
@@ -189,18 +171,18 @@
     "note": ""
   },
   {
-    "ldap": "ndmanh7",
+    "ldap": "dmthang2",
     "bus": "1",
-    "room": "Nguyễn Duy Mạnh, Đinh Mạnh Thắng",
+    "room": "Đinh Mạnh Thắng, Nguyễn Duy Mạnh",
     "members": [
       "A11"
     ],
     "note": ""
   },
   {
-    "ldap": "lqminh3",
+    "ldap": "ndmanh7",
     "bus": "1",
-    "room": "Cà Văn Quế, Lưu Quang Minh",
+    "room": "Nguyễn Duy Mạnh, Đinh Mạnh Thắng",
     "members": [
       "A11"
     ],
