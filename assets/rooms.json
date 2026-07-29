@@ -1,1066 +1,847 @@
 [
   {
     "ldap": "LDAP",
-    "bus": "Xe",
-    "room": "Số phòng",
+    "bus": "Số phòng",
+    "room": "Members",
     "members": [
-      "Members"
+      "Xe"
     ],
-    "note": "Ghi chú"
+    "note": ""
   },
   {
     "ldap": "vhdung1",
-    "bus": "1",
-    "room": "A1",
+    "bus": "A1",
+    "room": "Vũ Hồng Dũng",
     "members": [
-      "Vũ Hồng Dũng"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "hvan",
-    "bus": "1",
-    "room": "A2",
+    "bus": "A2",
+    "room": "Hoàng Vĩnh An, Hoàng Trí Dũng",
     "members": [
-      "Hoàng Vĩnh An",
-      "Hoàng Trí Dũng"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "htdung8",
-    "bus": "1",
-    "room": "A2",
+    "bus": "A2",
+    "room": "Hoàng Vĩnh An, Hoàng Trí Dũng",
     "members": [
-      "Hoàng Vĩnh An",
-      "Hoàng Trí Dũng"
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "cvque",
+    "bus": "A3",
+    "room": "Lưu Quang Minh, Cà Văn Quế",
+    "members": [
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "dmthang2",
-    "bus": "1",
-    "room": "A3",
+    "bus": "A3",
+    "room": "Đinh Mạnh Thắng, Nguyễn Duy Mạnh",
     "members": [
-      "Đinh Mạnh Thắng",
-      "Đồng Văn Hiếu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dvhieu2",
-    "bus": "1",
-    "room": "A3",
-    "members": [
-      "Đinh Mạnh Thắng",
-      "Đồng Văn Hiếu"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "ldquan",
-    "bus": "1",
-    "room": "A4",
+    "bus": "A4",
+    "room": "Lê Đức Quân, Phạm Văn Hiếu",
     "members": [
-      "Lê Đức Quân",
-      "Phạm Văn Hiếu"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "pvhieu2",
-    "bus": "1",
-    "room": "A4",
+    "bus": "A4",
+    "room": "Lê Đức Quân, Phạm Văn Hiếu",
     "members": [
-      "Lê Đức Quân",
-      "Phạm Văn Hiếu"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "bvquynh",
-    "bus": "1",
-    "room": "A5",
+    "bus": "A5",
+    "room": "Bùi Văn Quỳnh, Trịnh Văn Quyền",
     "members": [
-      "Bùi Văn Quỳnh",
-      "Trịnh Văn Quyền"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "tvquyen1",
-    "bus": "1",
-    "room": "A5",
+    "bus": "A5",
+    "room": "Bùi Văn Quỳnh, Trịnh Văn Quyền",
     "members": [
-      "Bùi Văn Quỳnh",
-      "Trịnh Văn Quyền"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "tvgiang3",
-    "bus": "1",
-    "room": "A6",
+    "bus": "A6",
+    "room": "Trần Văn Giang, Nguyễn Mạnh Toán",
     "members": [
-      "Trần Văn Giang",
-      "Nguyễn Mạnh Toán"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "nmtoan2",
-    "bus": "1",
-    "room": "A6",
+    "bus": "A6",
+    "room": "Trần Văn Giang, Nguyễn Mạnh Toán",
     "members": [
-      "Trần Văn Giang",
-      "Nguyễn Mạnh Toán"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "dvviet",
-    "bus": "1",
-    "room": "A7",
+    "bus": "A7",
+    "room": "Đỗ Văn Việt, Phạm Mạnh Khang",
     "members": [
-      "Đỗ Văn Việt",
-      "Phạm Mạnh Khang"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "pmkhang",
-    "bus": "1",
-    "room": "A7",
+    "bus": "A7",
+    "room": "Đỗ Văn Việt, Phạm Mạnh Khang",
     "members": [
-      "Đỗ Văn Việt",
-      "Phạm Mạnh Khang"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "lvdao1",
-    "bus": "1",
-    "room": "A8",
+    "bus": "A8",
+    "room": "Lê Văn Đào, Nguyễn Phú Cầm, Nguyễn Văn Khánh",
     "members": [
-      "Lê Văn Đào",
-      "Nguyễn Phú Cầm"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "npcam",
-    "bus": "1",
-    "room": "A8",
+    "bus": "A8",
+    "room": "Lê Văn Đào, Nguyễn Phú Cầm, Nguyễn Văn Khánh",
     "members": [
-      "Lê Văn Đào",
-      "Nguyễn Phú Cầm"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nxhung2",
-    "bus": "1",
-    "room": "A9",
-    "members": [
-      "Nguyễn Xuân Hùng",
-      "Vũ Đức Anh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "vdanh5",
-    "bus": "1",
-    "room": "A9",
-    "members": [
-      "Nguyễn Xuân Hùng",
-      "Vũ Đức Anh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nvdai",
-    "bus": "1",
-    "room": "A10",
-    "members": [
-      "Ninh Văn Đại",
-      "Vũ Văn Mạnh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "vvmanh",
-    "bus": "1",
-    "room": "A10",
-    "members": [
-      "Ninh Văn Đại",
-      "Vũ Văn Mạnh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "pxtu1",
-    "bus": "1",
-    "room": "A11",
-    "members": [
-      "Phạm Xuân Tú",
-      "Nguyễn Duy Mạnh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ndmanh7",
-    "bus": "1",
-    "room": "A11",
-    "members": [
-      "Phạm Xuân Tú",
-      "Nguyễn Duy Mạnh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ltthao4",
-    "bus": "1",
-    "room": "A12",
-    "members": [
-      "Lê Thị Thảo",
-      "Đỗ Kiều Oanh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dkoanh4",
-    "bus": "1",
-    "room": "A12",
-    "members": [
-      "Lê Thị Thảo",
-      "Đỗ Kiều Oanh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "htthom",
-    "bus": "1",
-    "room": "A13",
-    "members": [
-      "Hoàng Thị Thơm",
-      "Nông Thị Phương An",
-      "Nguyễn Thị Hằng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ntpan",
-    "bus": "1",
-    "room": "A13",
-    "members": [
-      "Hoàng Thị Thơm",
-      "Nông Thị Phương An",
-      "Nguyễn Thị Hằng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nthang15",
-    "bus": "1",
-    "room": "A13",
-    "members": [
-      "Hoàng Thị Thơm",
-      "Nông Thị Phương An",
-      "Nguyễn Thị Hằng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ldhtrieu",
-    "bus": "1",
-    "room": "A14",
-    "members": [
-      "Lê Duy Hải Triều",
-      "Nguyễn Đức Vinh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ndvinh4",
-    "bus": "1",
-    "room": "A14",
-    "members": [
-      "Lê Duy Hải Triều",
-      "Nguyễn Đức Vinh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "pbmuoi",
-    "bus": "1",
-    "room": "A15",
-    "members": [
-      "Phạm Bá Mười",
-      "Nguyễn Hoàng Phong"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nhphong4",
-    "bus": "1",
-    "room": "A15",
-    "members": [
-      "Phạm Bá Mười",
-      "Nguyễn Hoàng Phong"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "hvson",
-    "bus": "1",
-    "room": "A16",
-    "members": [
-      "Hoàng Văn Sơn",
-      "Mai Viết Hoàng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "mvhoang1",
-    "bus": "1",
-    "room": "A16",
-    "members": [
-      "Hoàng Văn Sơn",
-      "Mai Viết Hoàng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nkson2",
-    "bus": "1",
-    "room": "A17",
-    "members": [
-      "Nguyễn Khắc Sơn",
-      "Nguyễn Huy Hoàng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nhhoang28",
-    "bus": "1",
-    "room": "A17",
-    "members": [
-      "Nguyễn Khắc Sơn",
-      "Nguyễn Huy Hoàng"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "qqminh",
-    "bus": "1",
-    "room": "A18",
-    "members": [
-      "Quản Quốc Minh",
-      "Chu Văn Hiếu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "cvhieu",
-    "bus": "1",
-    "room": "A18",
-    "members": [
-      "Quản Quốc Minh",
-      "Chu Văn Hiếu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "btluc",
-    "bus": "1",
-    "room": "A19",
-    "members": [
-      "Bùi Tiến Lực",
-      "Lý Văn Tiến"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "lvtien3",
-    "bus": "1",
-    "room": "A19",
-    "members": [
-      "Bùi Tiến Lực",
-      "Lý Văn Tiến"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dmquang4",
-    "bus": "1",
-    "room": "A20",
-    "members": [
-      "Đoàn Minh Quang",
-      "Nguyễn Văn Nghĩa"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nvnghia1",
-    "bus": "1",
-    "room": "A20",
-    "members": [
-      "Đoàn Minh Quang",
-      "Nguyễn Văn Nghĩa"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ldkhoan",
-    "bus": "1",
-    "room": "A21",
-    "members": [
-      "Lê Đắc Khoản",
-      "Lưu Quang Minh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "lqminh3",
-    "bus": "1",
-    "room": "A21",
-    "members": [
-      "Lê Đắc Khoản",
-      "Lưu Quang Minh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dqhuy16",
-    "bus": "2",
-    "room": "B1",
-    "members": [
-      "Đỗ Quang Huy",
-      "Lê Ngọc Đức"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "lnduc",
-    "bus": "2",
-    "room": "B1",
-    "members": [
-      "Đỗ Quang Huy",
-      "Lê Ngọc Đức"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dnson5",
-    "bus": "2",
-    "room": "B2",
-    "members": [
-      "Dương Ngọc Sơn",
-      "Hà Trung Hiếu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "hthieu5",
-    "bus": "2",
-    "room": "B2",
-    "members": [
-      "Dương Ngọc Sơn",
-      "Hà Trung Hiếu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "hthyen6",
-    "bus": "2",
-    "room": "B3",
-    "members": [
-      "Hoàng Thị Hải Yến",
-      "Nguyễn Hương Thảo"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nhthao13",
-    "bus": "2",
-    "room": "B3",
-    "members": [
-      "Hoàng Thị Hải Yến",
-      "Nguyễn Hương Thảo"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "hlhuong",
-    "bus": "2",
-    "room": "B4",
-    "members": [
-      "Hoàng Lan Hương",
-      "Nguyễn Thị Minh Thúy"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ntmthuy1",
-    "bus": "2",
-    "room": "B4",
-    "members": [
-      "Hoàng Lan Hương",
-      "Nguyễn Thị Minh Thúy"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "pvly",
-    "bus": "2",
-    "room": "B5",
-    "members": [
-      "Phạm Vân Ly",
-      "Phạm Thị Thu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ptthu4",
-    "bus": "2",
-    "room": "B5",
-    "members": [
-      "Phạm Vân Ly",
-      "Phạm Thị Thu"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nnquyen",
-    "bus": "2",
-    "room": "B6",
-    "members": [
-      "Nguyễn Ngọc Quyên",
-      "Đỗ Thị Thanh Nhàn"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dttnhan",
-    "bus": "2",
-    "room": "B6",
-    "members": [
-      "Nguyễn Ngọc Quyên",
-      "Đỗ Thị Thanh Nhàn"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "vthyen1",
-    "bus": "2",
-    "room": "B7",
-    "members": [
-      "Vũ Thị Hải Yến",
-      "Nguyễn Thu Trang"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nttrang24",
-    "bus": "2",
-    "room": "B7",
-    "members": [
-      "Vũ Thị Hải Yến",
-      "Nguyễn Thu Trang"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "Ndchien2",
-    "bus": "2",
-    "room": "B8",
-    "members": [
-      "Nguyễn Đức Chiến",
-      "Lê Hải Anh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "Lhanh8",
-    "bus": "2",
-    "room": "B8",
-    "members": [
-      "Nguyễn Đức Chiến",
-      "Lê Hải Anh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nhthang13",
-    "bus": "2",
-    "room": "B9",
-    "members": [
-      "Nguyễn Hữu Thắng",
-      "Phạm Văn Liêm"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "pvliem3",
-    "bus": "2",
-    "room": "B9",
-    "members": [
-      "Nguyễn Hữu Thắng",
-      "Phạm Văn Liêm"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ntpanh7",
-    "bus": "2",
-    "room": "B10",
-    "members": [
-      "Nguyễn Thị Phương Anh",
-      "Vũ Thị Thanh Vân"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "vttvan",
-    "bus": "2",
-    "room": "B10",
-    "members": [
-      "Nguyễn Thị Phương Anh",
-      "Vũ Thị Thanh Vân"
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "nvkhanh2",
-    "bus": "2",
-    "room": "B11",
+    "bus": "A8",
+    "room": "Lê Văn Đào, Nguyễn Phú Cầm, Nguyễn Văn Khánh",
     "members": [
-      "Nguyễn Văn Khánh",
-      "Nguyễn Văn Minh"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "nvminh4",
-    "bus": "2",
-    "room": "B11",
+    "ldap": "nxhung2",
+    "bus": "A9",
+    "room": "Nguyễn Xuân Hùng, Vũ Đức Anh",
     "members": [
-      "Nguyễn Văn Khánh",
-      "Nguyễn Văn Minh"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ttlam1",
-    "bus": "2",
-    "room": "B12",
+    "ldap": "vdanh5",
+    "bus": "A9",
+    "room": "Nguyễn Xuân Hùng, Vũ Đức Anh",
     "members": [
-      "Trần Tùng Lâm",
-      "Nguyễn Văn Thái"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "nvthai3",
-    "bus": "2",
-    "room": "B12",
+    "ldap": "nvdai",
+    "bus": "A10",
+    "room": "Ninh Văn Đại, Vũ Văn Mạnh",
     "members": [
-      "Trần Tùng Lâm",
-      "Nguyễn Văn Thái"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "pdbien",
-    "bus": "2",
-    "room": "B13",
+    "ldap": "vvmanh",
+    "bus": "A10",
+    "room": "Ninh Văn Đại, Vũ Văn Mạnh",
     "members": [
-      "Phạm Danh Biên",
-      "Mai Minh Phuong"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "mmphuong2",
-    "bus": "2",
-    "room": "B13",
+    "ldap": "ndmanh7",
+    "bus": "A11",
+    "room": "Nguyễn Duy Mạnh, Đinh Mạnh Thắng",
     "members": [
-      "Phạm Danh Biên",
-      "Mai Minh Phuong"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "btbngoc",
-    "bus": "2",
-    "room": "B14",
+    "ldap": "lqminh3",
+    "bus": "A11",
+    "room": "Cà Văn Quế, Lưu Quang Minh",
     "members": [
-      "Bùi Thị Bảo Ngọc",
-      "Trương Thị Ngọc Diệp"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ttndiep8",
-    "bus": "2",
-    "room": "B14",
+    "ldap": "ltthao4",
+    "bus": "A12",
+    "room": "Lê Thị Thảo, Đỗ Kiều Oanh",
     "members": [
-      "Bùi Thị Bảo Ngọc",
-      "Trương Thị Ngọc Diệp"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "tnson3",
-    "bus": "2",
-    "room": "B15",
+    "ldap": "dkoanh4",
+    "bus": "A12",
+    "room": "Lê Thị Thảo, Đỗ Kiều Oanh",
     "members": [
-      "Trần Ngọc Sơn",
-      "Kiều Trung Hiếu"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "kthieu4",
-    "bus": "2",
-    "room": "B15",
+    "ldap": "htthom",
+    "bus": "A13",
+    "room": "Hoàng Thị Thơm, Nông Thị Phương An",
     "members": [
-      "Trần Ngọc Sơn",
-      "Kiều Trung Hiếu"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "pnanh12",
-    "bus": "2",
-    "room": "B16",
+    "ldap": "ntpan",
+    "bus": "A13",
+    "room": "Hoàng Thị Thơm, Nông Thị Phương An",
     "members": [
-      "Phạm Ngọc Ánh",
-      "Ngô Thành An"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ntan12",
-    "bus": "2",
-    "room": "B16",
+    "ldap": "ldhtrieu",
+    "bus": "A14",
+    "room": "Lê Duy Hải Triều, Nguyễn Đức Vinh",
     "members": [
-      "Phạm Ngọc Ánh",
-      "Ngô Thành An"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "pthly",
-    "bus": "2",
-    "room": "B17",
+    "ldap": "ndvinh4",
+    "bus": "A14",
+    "room": "Lê Duy Hải Triều, Nguyễn Đức Vinh",
     "members": [
-      "Phan Thị Hương Ly",
-      "Nguyễn Thị Minh Anh"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ntmanh15",
-    "bus": "2",
-    "room": "B17",
+    "ldap": "pbmuoi",
+    "bus": "A15",
+    "room": "Phạm Bá Mười, Nguyễn Hoàng Phong",
     "members": [
-      "Phan Thị Hương Ly",
-      "Nguyễn Thị Minh Anh"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "tqtrung2",
-    "bus": "2",
-    "room": "B18",
+    "ldap": "nhphong4",
+    "bus": "A15",
+    "room": "Phạm Bá Mười, Nguyễn Hoàng Phong",
     "members": [
-      "Tô Quang Trung",
-      "Tạ Duy Đạo"
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "hvson",
+    "bus": "A16",
+    "room": "Hoàng Văn Sơn, Mai Viết Hoàng",
+    "members": [
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "mvhoang1",
+    "bus": "A16",
+    "room": "Hoàng Văn Sơn, Mai Viết Hoàng",
+    "members": [
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nkson2",
+    "bus": "A17",
+    "room": "Nguyễn Khắc Sơn, Nguyễn Huy Hoàng",
+    "members": [
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nhhoang28",
+    "bus": "A17",
+    "room": "Nguyễn Khắc Sơn, Nguyễn Huy Hoàng",
+    "members": [
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "qqminh",
+    "bus": "A18",
+    "room": "Quản Quốc Minh, Chu Văn Hiếu",
+    "members": [
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "cvhieu",
+    "bus": "A18",
+    "room": "Quản Quốc Minh, Chu Văn Hiếu",
+    "members": [
+      "1"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "btluc",
+    "bus": "A19",
+    "room": "Tạ Duy Đạo, Bùi Tiến Lực",
+    "members": [
+      "1"
     ],
     "note": ""
   },
   {
     "ldap": "tddao1",
-    "bus": "2",
-    "room": "B18",
+    "bus": "A19",
+    "room": "Tạ Duy Đạo, Bùi Tiến Lực",
     "members": [
-      "Tô Quang Trung",
-      "Tạ Duy Đạo"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ntttrang24",
-    "bus": "2",
-    "room": "B19",
+    "ldap": "dmquang4",
+    "bus": "A20",
+    "room": "Đoàn Minh Quang, Nguyễn Văn Nghĩa",
     "members": [
-      "Nguyễn Thị Thu Trang",
-      "Nguyễn Thị Hồng Nhung"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "nthnhung10",
-    "bus": "2",
-    "room": "B19",
+    "ldap": "nvnghia1",
+    "bus": "A20",
+    "room": "Đoàn Minh Quang, Nguyễn Văn Nghĩa",
     "members": [
-      "Nguyễn Thị Thu Trang",
-      "Nguyễn Thị Hồng Nhung"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ndhoang13",
-    "bus": "2",
-    "room": "B20",
+    "ldap": "ttlam1",
+    "bus": "A21",
+    "room": "Trần Tùng Lâm, Nguyễn Văn Thái",
     "members": [
-      "Nguyễn Đức Hoàng",
-      "Trần Đức Mạnh"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "tdmanh9",
-    "bus": "2",
-    "room": "B20",
+    "ldap": "nvthai3",
+    "bus": "A21",
+    "room": "Trần Tùng Lâm, Nguyễn Văn Thái",
     "members": [
-      "Nguyễn Đức Hoàng",
-      "Trần Đức Mạnh"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "ntthanh23",
-    "bus": "2",
-    "room": "B21",
+    "ldap": "dqhuy16",
+    "bus": "B1",
+    "room": "Đỗ Quang Huy, Lê Ngọc Đức",
     "members": [
-      "Nguyễn Trung Thành",
-      "Phạm Quang Trung"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "pqtrung8",
-    "bus": "2",
-    "room": "B21",
+    "ldap": "lnduc",
+    "bus": "B1",
+    "room": "Đỗ Quang Huy, Lê Ngọc Đức",
     "members": [
-      "Nguyễn Trung Thành",
-      "Phạm Quang Trung"
+      "1"
     ],
     "note": ""
   },
   {
-    "ldap": "lbdong",
-    "bus": "3",
-    "room": "C1",
+    "ldap": "dnson5",
+    "bus": "B2",
+    "room": "Dương Ngọc Sơn, Hà Trung Hiếu",
     "members": [
-      "Lê Bá Đông",
-      "Dương Trung Đạt"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "dtdat24",
-    "bus": "3",
-    "room": "C1",
+    "ldap": "hthieu5",
+    "bus": "B2",
+    "room": "Dương Ngọc Sơn, Hà Trung Hiếu",
     "members": [
-      "Lê Bá Đông",
-      "Dương Trung Đạt"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "nddoan2",
-    "bus": "3",
-    "room": "C2",
+    "ldap": "hthyen6",
+    "bus": "B3",
+    "room": "Hoàng Thị Hải Yến, Nguyễn Hương Thảo",
     "members": [
-      "Nguyễn Đình Đoàn",
-      "Nguyễn Minh Khoa"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "nmkhoa1",
-    "bus": "3",
-    "room": "C2",
+    "ldap": "nhthao13",
+    "bus": "B3",
+    "room": "Hoàng Thị Hải Yến, Nguyễn Hương Thảo",
     "members": [
-      "Nguyễn Đình Đoàn",
-      "Nguyễn Minh Khoa"
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "btbngoc",
+    "bus": "B4",
+    "room": "Bùi Thị Bảo Ngọc, Nguyễn Thị Minh Thúy",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ntmthuy1",
+    "bus": "B4",
+    "room": "Bùi Thị Bảo Ngọc, Nguyễn Thị Minh Thúy",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "pvly",
+    "bus": "B5",
+    "room": "Phạm Vân Ly, Phạm Thị Thu",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ptthu4",
+    "bus": "B5",
+    "room": "Phạm Vân Ly, Phạm Thị Thu",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nnquyen",
+    "bus": "B6",
+    "room": "Nguyễn Ngọc Quyên, Đỗ Thị Thanh Nhàn",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "dttnhan",
+    "bus": "B6",
+    "room": "Nguyễn Ngọc Quyên, Đỗ Thị Thanh Nhàn",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "tnson3",
+    "bus": "B7",
+    "room": "Trần Ngọc Sơn, Kiều Trung Hiếu",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "kthieu4",
+    "bus": "B7",
+    "room": "Trần Ngọc Sơn, Kiều Trung Hiếu",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ndchien2",
+    "bus": "B8",
+    "room": "Nguyễn Đức Chiến, Lê Hải Anh",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "lhanh8",
+    "bus": "B8",
+    "room": "Nguyễn Đức Chiến, Lê Hải Anh",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nhthang13",
+    "bus": "B9",
+    "room": "Nguyễn Hữu Thắng, Phạm Văn Liêm",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "pvliem3",
+    "bus": "B9",
+    "room": "Nguyễn Hữu Thắng, Phạm Văn Liêm",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ntpanh7",
+    "bus": "B10",
+    "room": "Nguyễn Thị Phương Anh, Vũ Thị Thanh Vân",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "vttvan",
+    "bus": "B10",
+    "room": "Nguyễn Thị Phương Anh, Vũ Thị Thanh Vân",
+    "members": [
+      "2"
     ],
     "note": ""
   },
   {
     "ldap": "ttthiep1",
-    "bus": "3",
-    "room": "C3",
+    "bus": "B11",
+    "room": "Trần Trung Thiệp, Phạm Ngọc Long",
     "members": [
-      "Trần Trung Thiệp",
-      "Phạm Ngọc Long"
+      "2"
     ],
     "note": ""
   },
   {
     "ldap": "pnlong3",
-    "bus": "3",
-    "room": "C3",
+    "bus": "B11",
+    "room": "Trần Trung Thiệp, Phạm Ngọc Long",
     "members": [
-      "Trần Trung Thiệp",
-      "Phạm Ngọc Long"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "nntuan6",
-    "bus": "3",
-    "room": "C4",
+    "ldap": "pnanh12",
+    "bus": "B12",
+    "room": "Phạm Ngọc Ánh, Ngô Thành An",
     "members": [
-      "Dương Hồng Hải",
-      "Nguyễn Ngọc Tuấn"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "dhhai6",
-    "bus": "3",
-    "room": "C4",
+    "ldap": "ntan12",
+    "bus": "B12",
+    "room": "Phạm Ngọc Ánh, Ngô Thành An",
     "members": [
-      "Dương Hồng Hải",
-      "Nguyễn Ngọc Tuấn"
+      "2"
     ],
     "note": ""
   },
   {
-    "ldap": "mtanh",
-    "bus": "3",
-    "room": "C5",
+    "ldap": "pdbien",
+    "bus": "B13",
+    "room": "Phạm Danh Biên, Lê Minh Quân",
     "members": [
-      "Mai Trung Anh",
-      "Vũ Thị Luyến"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "vtluyen",
-    "bus": "3",
-    "room": "C5",
-    "members": [
-      "Mai Trung Anh",
-      "Vũ Thị Luyến"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ntngoc13",
-    "bus": "3",
-    "room": "C6",
-    "members": [
-      "Nguyễn Thị Ngọc",
-      "Cao Thị Khánh Linh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "ctklinh",
-    "bus": "3",
-    "room": "C6",
-    "members": [
-      "Nguyễn Thị Ngọc",
-      "Cao Thị Khánh Linh"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "nvbao3",
-    "bus": "3",
-    "room": "C7",
-    "members": [
-      "Nguyễn Văn Bảo",
-      "Lê Minh Quân"
+      "2"
     ],
     "note": ""
   },
   {
     "ldap": "lmquan2",
-    "bus": "3",
-    "room": "C7",
+    "bus": "B13",
+    "room": "Phạm Danh Biên, Lê Minh Quân",
     "members": [
-      "Nguyễn Văn Bảo",
-      "Lê Minh Quân"
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ttndiep8",
+    "bus": "B14",
+    "room": "Trương Thị Ngọc Diệp",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ntttrang24",
+    "bus": "B15",
+    "room": "Nguyễn Thị Thu Trang, Nguyễn Thị Hồng Nhung",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nthnhung10",
+    "bus": "B15",
+    "room": "Nguyễn Thị Thu Trang, Nguyễn Thị Hồng Nhung",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ndhoang13",
+    "bus": "B16",
+    "room": "Nguyễn Đức Hoàng, Trần Đức Mạnh",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "tdmanh9",
+    "bus": "B16",
+    "room": "Nguyễn Đức Hoàng, Trần Đức Mạnh",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "pthly",
+    "bus": "B17",
+    "room": "Phan Thị Hương Ly, Nguyễn Thị Minh Anh",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ntmanh15",
+    "bus": "B17",
+    "room": "Phan Thị Hương Ly, Nguyễn Thị Minh Anh",
+    "members": [
+      "2"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "lbdong",
+    "bus": "C1",
+    "room": "Lê Bá Đông, Lê Đắc Khoản",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "ldkhoan",
+    "bus": "C1",
+    "room": "Lê Bá Đông, Lê Đắc Khoản",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "vthyen1",
+    "bus": "C2",
+    "room": "Vũ Thị Hải Yến, Lê Thu Linh",
+    "members": [
+      "3"
     ],
     "note": ""
   },
   {
     "ldap": "ltlinh1",
-    "bus": "3",
-    "room": "C8",
+    "bus": "C2",
+    "room": "Vũ Thị Hải Yến, Lê Thu Linh",
     "members": [
-      "Lê Thu Linh",
-      "Nguyễn Thị Hồng Nhung"
+      "3"
     ],
     "note": ""
   },
   {
-    "ldap": "nthnhung",
-    "bus": "3",
-    "room": "C8",
+    "ldap": "ntngoc13",
+    "bus": "C3",
+    "room": "Nguyễn Thị Ngọc, Cao Thị Khánh Linh",
     "members": [
-      "Lê Thu Linh",
-      "Nguyễn Thị Hồng Nhung"
+      "3"
     ],
     "note": ""
   },
   {
-    "ldap": "ptthanh16",
-    "bus": "3",
-    "room": "C9",
+    "ldap": "ctklinh",
+    "bus": "C3",
+    "room": "Nguyễn Thị Ngọc, Cao Thị Khánh Linh",
     "members": [
-      "Phạm Tất Thành và gia đình"
+      "3"
     ],
     "note": ""
   },
   {
-    "ldap": "",
-    "bus": "3",
-    "room": "C9",
+    "ldap": "ntthanh23",
+    "bus": "C4",
+    "room": "Nguyễn Trung Thành, Phạm Quang Trung",
     "members": [
-      ""
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "pqtrung8",
+    "bus": "C4",
+    "room": "Nguyễn Trung Thành, Phạm Quang Trung",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nddoan2",
+    "bus": "C5",
+    "room": "Nguyễn Đình Đoàn, Nguyễn Minh Khoa",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nmkhoa1",
+    "bus": "C5",
+    "room": "Nguyễn Đình Đoàn, Nguyễn Minh Khoa",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "dhhai6",
+    "bus": "C6",
+    "room": "Dương Hồng Hải, Nguyễn Ngọc Tuấn",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nntuan6",
+    "bus": "C6",
+    "room": "Dương Hồng Hải, Nguyễn Ngọc Tuấn",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "mtanh",
+    "bus": "C7",
+    "room": "Mai Trung Anh",
+    "members": [
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nvbao3",
+    "bus": "C8",
+    "room": "Nguyễn Văn Bảo",
+    "members": [
+      "3"
     ],
     "note": ""
   },
   {
     "ldap": "ndviet1",
-    "bus": "3",
-    "room": "C10",
+    "bus": "C9",
+    "room": "Nguyễn Đức Việt và gia đình",
     "members": [
-      "Nguyễn Đức Việt và gia đình"
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "",
-    "bus": "3",
-    "room": "C10",
-    "members": [
-      ""
-    ],
-    "note": ""
-  },
-  {
-    "ldap": "dddoi",
-    "bus": "3",
-    "room": "C11",
-    "members": [
-      "Đỗ Đình Đối"
+      "3"
     ],
     "note": ""
   },
   {
     "ldap": "nvcong1",
-    "bus": "3",
-    "room": "C12",
+    "bus": "C10",
+    "room": "Nguyễn Văn Công và gia đình",
     "members": [
-      "Nguyễn Văn Công"
+      "3"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "nttrang24",
+    "bus": "",
+    "room": "",
+    "members": [
+      "nttrang24"
+    ],
+    "note": ""
+  },
+  {
+    "ldap": "tqtrung2",
+    "bus": "",
+    "room": "",
+    "members": [
+      "tqtrung2"
     ],
     "note": ""
   }
